@@ -5,7 +5,5 @@
     <%= user.name %>
   <h3>introduction</h3>
     <%= user.introduction %>
-  <% if user.id == current_user.id %>
-    <p><%= link_to "プロフィール編集", edit_user_path(user) %></p>
-  <% end %>
+      <p><%= link_to "プロフィール編集", edit_user_path(user) %></p>
 </div>
