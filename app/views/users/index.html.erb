@@ -1,0 +1,13 @@
+<%= render 'users/list', user: @user, book: @book %>
+
+<h1>Users</h1>
+<% @users.each do |user| %>
+<div>
+  <p>image</p>
+    <%= attachment_image_tag user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %>
+  <p>name</p>
+    <%= user.name %>
+    <p><%= link_to user_path(user.id) do %>Show</p>
+  <% end %>
+</div>
+<% end %>
